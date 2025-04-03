@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="login-container d-flex align-items-center justify-content-center">
+    <div class="login-box d-flex shadow-lg">
+        <!-- Left Side - Illustration -->
+        <div class="login-image">
+            <img src="/images/login-illustration.png" alt="Login Illustration" class="img-fluid">
+        </div>
+
+        <!-- Right Side - Login Form -->
+        <div class="login-form p-4">
+            <div class="text-center">
+                <i class="fas fa-user-circle fa-3x text-white"></i>
+                <h3 class="text-white mt-2">Login</h3>
+            </div>
+            <form method="post" asp-controller="Account" asp-action="Login">
+                <div class="mb-3">
+                    <label for="email" class="form-label text-white">Email Address</label>
+                    <input type="email" name="Email" id="email" class="form-control" placeholder="user@gmail.com" required />
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label text-white">Password</label>
+                    <input type="password" name="Password" id="password" class="form-control" required />
+                </div>
+                <button type="submit" class="btn btn-light w-100">Login</button>
+            </form>
+            <p class="text-center text-white mt-3">
+                Don't have an account? <a asp-controller="Account" asp-action="Register" class="text-light fw-bold">Register</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Styles -->
+<style>
+    .login-container {
+        height: 100vh;
+        background-color: #f8f9fa;
+    }
+
+    .login-box {
+        width: 800px;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .login-image {
+        width: 50%;
+        background: #f8f9fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .login-form {
+        width: 50%;
+        background: #f39c12;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .btn-light {
+        background: #fff;
+        color: #f39c12;
+        font-weight: bold;
+    }
+
+        .btn-light:hover {
+            background: #f8f9fa;
+        }
+</style>

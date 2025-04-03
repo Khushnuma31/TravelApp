@@ -1,0 +1,178 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- Navbar Section -->
+<header class="navbar-section bg-white shadow-sm">
+    <div class="container py-3 d-flex justify-content-between align-items-center">
+        <img src="/images/logo.png" alt="Logo" style="height: 50px;" />
+        <nav class="nav">
+            <a asp-controller="Home" asp-action="Index" class="nav-link text-dark fw-bold">Home</a>
+            <a asp-controller="Home" asp-action="About" class="nav-link text-dark">About</a>
+            <a asp-controller="Home" asp-action="Tours" class="nav-link text-dark">Tours</a>
+            <a asp-controller="Account" asp-action="Login" class="btn btn-outline-primary me-2">Login</a>
+            <a asp-controller="Account" asp-action="Register" class="btn btn-primary">Register</a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Hero Text -->
+            <div class="col-md-6 col-12">
+                <button class="btn btn-warning mb-3 px-4 py-2">
+                    Know Before You Go <i class="fas fa-globe"></i>
+                </button>
+                <h1 class="fw-bold">
+                    Traveling opens the door to creating <span class="highlight text-warning">memories</span>
+                </h1>
+                <p class="mt-3 text-secondary">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullam nobis asperiores soluta voluptas quos voluptates.
+                </p>
+            </div>
+
+            <!-- Hero Media -->
+            <div class="col-md-6 col-12">
+                <div class="d-flex justify-content-between gap-3">
+                    <img src="/images/hero-img01.jpg" alt="Destination 1" class="img-fluid rounded media-item" />
+                    <video autoplay muted loop poster="/images/video-placeholder.jpg" class="img-fluid rounded media-item">
+                        <source src="/videos/hero-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <img src="/images/hero-img02.jpg" alt="Destination 2" class="img-fluid rounded media-item" />
+                </div>
+            </div>
+
+
+
+        <!-- Search Bar -->
+        <div class="search-bar mt-4 p-4 rounded shadow-sm">
+            <form class="d-flex gap-3 justify-content-center align-items-center">
+                <div class="text-center">
+                    <label class="form-label fw-bold text-secondary mb-1">Location</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-warning text-white">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </span>
+                        <input type="text" placeholder="Where are you going?" class="form-control form-control-lg" />
+                    </div>
+                </div>
+                <div class="text-center">
+                    <label class="form-label fw-bold text-secondary mb-1">Distance</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-warning text-white">
+                            <i class="fas fa-route"></i>
+                        </span>
+                        <input type="number" placeholder="Distance (km)" class="form-control form-control-lg" />
+                    </div>
+                </div>
+                <div class="text-center">
+                    <label class="form-label fw-bold text-secondary mb-1">Max People</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-warning text-white">
+                            <i class="fas fa-users"></i>
+                        </span>
+                        <input type="number" placeholder="0" class="form-control form-control-lg" />
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-warning btn-lg px-5">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Services Section -->
+<section class="mt-5">
+    <div class="text-center">
+        <h2 class="fw-bold">What we serve</h2>
+        <p class="text-secondary">We offer our best services for you to enjoy a wonderful journey.</p>
+    </div>
+    <div class="container">
+        <div class="row mt-4 text-center">
+            <div class="col-md-4">
+                <i class="fas fa-cloud-sun fa-3x text-warning"></i>
+                <h5 class="mt-3">Calculate Weather</h5>
+            </div>
+            <div class="col-md-4">
+                <i class="fas fa-user-tie fa-3x text-warning"></i>
+                <h5 class="mt-3">Best Tour Guide</h5>
+            </div>
+            <div class="col-md-4">
+                <i class="fas fa-tools fa-3x text-warning"></i>
+                <h5 class="mt-3">Customization</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Styles -->
+<style>
+    .navbar-section {
+        border-bottom: 1px solid #ddd;
+        z-index: 1000;
+    }
+
+    .hero-section {
+        padding: 60px 0;
+        background: #f9f9f9;
+    }
+
+    .search-bar {
+        background: #fff;
+        border-radius: 12px;
+    }
+
+        .search-bar .form-control {
+            border: 1px solid #ddd;
+        }
+
+        .search-bar .btn {
+            background-color: #f39c12;
+            border: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+    h1 span {
+        color: #f39c12;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    img {
+        border-radius: 10px;
+    }
+
+    .services i {
+        color: #f39c12;
+    }
+
+        .media-item {
+            height: 220px;
+            width: 220px; 
+            border-radius: 10px; 
+            object-fit: cover; 
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+            .media-item:hover {
+                transform: scale(1.05); 
+                box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); 
+            }
+        .d-flex.gap-3 > .media-item {
+            margin-right: 10px; 
+        }
+            .d-flex.gap-3 > .media-item:last-child {
+                margin-right: 0;
+            }
+</style>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
