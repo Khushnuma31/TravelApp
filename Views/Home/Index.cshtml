@@ -1,579 +1,519 @@
-﻿@{
-    ViewData["Title"] = "Home";
-}
+﻿    @{
+        ViewData["Title"] = "Home";
+    }
 
-<!-- Navbar Section -->
-<header class="navbar-section bg-white shadow-sm">
-    <div class="container py-3 d-flex justify-content-between align-items-center">
-        <img src="/images/logo.png" alt="Logo" style="height: 50px;" />
-        <nav class="nav">
-            <a asp-controller="Home" asp-action="Index" class="nav-link text-dark fw-bold">Home</a>
-            <a asp-controller="Home" asp-action="About" class="nav-link text-dark">About</a>
-            <a asp-controller="Home" asp-action="Tours" class="nav-link text-dark">Tours</a>
-            <a asp-controller="Account" asp-action="Login" class="btn btn-outline-primary me-2">Login</a>
-            <a asp-controller="Account" asp-action="Register" class="btn btn-primary">Register</a>
-        </nav>
-    </div>
-</header>
+    <!-- Navbar Section -->
 
-<!-- Hero Section -->
-<section id="home" class="container-fluid py-5">
-<div class="hero-section">
-    <div class="container">
-        <div class="row align-items-center">
-            <!-- Hero Text -->
-            <div class="col-md-6 col-12">
-                <button class="btn btn-warning mb-3 px-4 py-2">
-                    Know Before You Go <i class="fas fa-globe"></i>
-                </button>
-                <h1 class="fw-bold">
-                    Traveling opens the door to creating <span class="highlight text-warning">memories</span>
-                </h1>
-                <p class="mt-3 text-secondary">
-                    Explore the world with ease. Discover breathtaking destinations, plan unforgettable trips, and enjoy seamless experiences.
-                </p>
+    <!-- Hero Section -->
+    <section id="home" class="container-fluid py-5">
+    <div class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Hero Text -->
+                <div class="col-md-6 col-12">
+                    <button class="btn btn-warning mb-3 px-4 py-2">
+                        Know Before You Go <i class="fas fa-globe"></i>
+                    </button>
+                    <h1 class="fw-bold">
+                        Traveling opens the door to creating <span class="highlight text-warning">memories</span>
+                    </h1>
+                    <p class="mt-3 text-secondary">
+                        Explore the world with ease. Discover breathtaking destinations, plan unforgettable trips, and enjoy seamless experiences.
+                    </p>
+                </div>
+
+                <!-- Hero Media -->
+                <div class="col-md-6 col-12">
+                    <div class="d-flex justify-content-between gap-3">
+                        <img src="/images/hero-img01.jpg" alt="Destination 1" class="img-fluid rounded media-item" />
+                        <video autoplay muted loop poster="/images/video-placeholder.jpg" class="img-fluid rounded media-item">
+                            <source src="/videos/hero-video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <img src="/images/hero-img02.jpg" alt="Destination 2" class="img-fluid rounded media-item" />
+                    </div>
+                </div>
             </div>
 
-            <!-- Hero Media -->
-            <div class="col-md-6 col-12">
-                <div class="d-flex justify-content-between gap-3">
-                    <img src="/images/hero-img01.jpg" alt="Destination 1" class="img-fluid rounded media-item" />
-                    <video autoplay muted loop poster="/images/video-placeholder.jpg" class="img-fluid rounded media-item">
-                        <source src="/videos/hero-video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <img src="/images/hero-img02.jpg" alt="Destination 2" class="img-fluid rounded media-item" />
-                </div>
+            <!-- Search Bar -->
+            <div class="search-bar mt-4 p-4 rounded shadow-sm">
+                <form class="d-flex gap-3 justify-content-center align-items-center">
+                    <div class="text-center">
+                        <label class="form-label fw-bold text-secondary mb-1">Location</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-warning text-white">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </span>
+                            <input type="text" placeholder="Where are you going?" class="form-control form-control-lg" />
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <label class="form-label fw-bold text-secondary mb-1">Distance</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-warning text-white">
+                                <i class="fas fa-route"></i>
+                            </span>
+                            <input type="number" placeholder="Distance (km)" class="form-control form-control-lg" />
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <label class="form-label fw-bold text-secondary mb-1">Max People</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-warning text-white">
+                                <i class="fas fa-users"></i>
+                            </span>
+                            <input type="number" placeholder="0" class="form-control form-control-lg" />
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-warning btn-lg px-5">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </form>
             </div>
         </div>
-
-        <!-- Search Bar -->
-        <div class="search-bar mt-4 p-4 rounded shadow-sm">
-            <form class="d-flex gap-3 justify-content-center align-items-center">
-                <div class="text-center">
-                    <label class="form-label fw-bold text-secondary mb-1">Location</label>
-                    <div class="input-group">
-                        <span class="input-group-text bg-warning text-white">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </span>
-                        <input type="text" placeholder="Where are you going?" class="form-control form-control-lg" />
-                    </div>
-                </div>
-                <div class="text-center">
-                    <label class="form-label fw-bold text-secondary mb-1">Distance</label>
-                    <div class="input-group">
-                        <span class="input-group-text bg-warning text-white">
-                            <i class="fas fa-route"></i>
-                        </span>
-                        <input type="number" placeholder="Distance (km)" class="form-control form-control-lg" />
-                    </div>
-                </div>
-                <div class="text-center">
-                    <label class="form-label fw-bold text-secondary mb-1">Max People</label>
-                    <div class="input-group">
-                        <span class="input-group-text bg-warning text-white">
-                            <i class="fas fa-users"></i>
-                        </span>
-                        <input type="number" placeholder="0" class="form-control form-control-lg" />
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-warning btn-lg px-5">
-                    <i class="fas fa-search"></i> Search
-                </button>
-            </form>
-        </div>
     </div>
-</div>
-
+    </section>
 <!-- Services Section -->
 <section id="services" class="container-fluid py-5 bg-light">
-<section class="services-section">
-    <div class="container">
-        <p class="subheading">What we serve</p>
-        <h2 class="main-heading">We offer our best services</h2>
-
-        <div class="service-cards">
-            <div class="service-card">
-                <div class="icon">
-                    <i class="fas fa-cloud-sun"></i> <!-- Weather Icon -->
+    <div class="services-section text-center">
+        <div class="container">
+            <p class="subheading text-warning fw-bold">What we serve</p>
+            <h2 class="main-heading fw-bold mb-5">We offer our best services</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-4">
+                    <div class="service-card p-4 bg-white shadow rounded">
+                        <div class="icon mb-3 fs-1 text-primary">
+                            <i class="fas fa-cloud-sun"></i>
+                        </div>
+                        <h4>Calculate Weather</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
                 </div>
-                <h3>Calculate Weather</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="icon">
-                    <i class="fas fa-user-tie"></i> <!-- Tour Guide Icon -->
+                <div class="col-md-4 mb-4">
+                    <div class="service-card p-4 bg-white shadow rounded">
+                        <div class="icon mb-3 fs-1 text-success">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>Best Tour Guide</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
                 </div>
-                <h3>Best Tour Guide</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="icon">
-                    <i class="fas fa-cogs"></i> <!-- Customization Icon -->
+                <div class="col-md-4 mb-4">
+                    <div class="service-card p-4 bg-white shadow rounded">
+                        <div class="icon mb-3 fs-1 text-warning">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4>Customization</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
                 </div>
-                <h3>Customization</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Featured Tours Section -->
-        <!-- Tour Section -->
-        <section id="tour" class="container-fluid py-5 text-center">
-            <div class="container">
-                <h2 class="fw-bold">Tours</h2>
-                <p>Discover amazing destinations with our exclusive tour packages.</p>
+<!-- Tour Section -->
+<section id="tour" class="container-fluid py-5 text-center">
+    <div class="container">
+        <h2 class="fw-bold">Tours</h2>
+        <p>Discover amazing destinations with our exclusive tour packages.</p>
 
-                <div class="row">
-                    <!-- Example Tour Card -->
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="~/images/tour-img01.jpg" class="card-img-top" alt="Paris">
-                            <div class="card-body">
-                                <h5 class="card-title">Paris</h5>
-                                <p class="text-muted">Romantic city of love and lights.</p>
-                                <p class="fw-bold">$1500</p>
-                                <a asp-controller="Home" asp-action="Book" asp-route-place="Paris" asp-route-img="/images/paris.jpg" asp-route-price="1500" class="btn btn-warning">Book Now</a>
-                            </div>
-                        </div>
+        <div class="row">
+            <!-- Paris 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="~/images/tour-img01.jpg" class="card-img-top" alt="Paris">
+                    <div class="card-body">
+                        <h5 class="card-title">Paris</h5>
+                        <p class="text-muted">Romantic city of love and lights.</p>
+                        <p class="fw-bold">$1500</p>
+                        <a asp-controller="Booking" asp-action="Book"
+                           asp-route-destination="Paris"
+                           asp-route-img="/images/tour-img01.jpg"
+                           asp-route-price="1500"
+                           class="btn btn-warning">Book Now</a>
                     </div>
-
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="~/images/tour-img02.jpg" class="card-img-top" alt="Paris">
-                            <div class="card-body">
-                                <h5 class="card-title">Paris</h5>
-                                <p class="text-muted">Romantic city of love and lights.</p>
-                                <p class="fw-bold">$1500</p>
-                                <a asp-controller="Home" asp-action="Book" asp-route-place="Paris" asp-route-img="/images/paris.jpg" asp-route-price="1500" class="btn btn-warning">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="~/images/tour-img03.jpg" class="card-img-top" alt="Paris">
-                            <div class="card-body">
-                                <h5 class="card-title">Paris</h5>
-                                <p class="text-muted">Romantic city of love and lights.</p>
-                                <p class="fw-bold">$1500</p>
-                                <a asp-controller="Home" asp-action="Book" asp-route-place="Paris" asp-route-img="/images/paris.jpg" asp-route-price="1500" class="btn btn-warning">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="~/images/tour-img04.jpg" class="card-img-top" alt="Paris">
-                            <div class="card-body">
-                                <h5 class="card-title">Paris</h5>
-                                <p class="text-muted">Romantic city of love and lights.</p>
-                                <p class="fw-bold">$1500</p>
-                                <a asp-controller="Home" asp-action="Book" asp-route-place="Paris" asp-route-img="/images/paris.jpg" asp-route-price="1500" class="btn btn-warning">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="~/images/tour-img05.jpg" class="card-img-top" alt="Paris">
-                            <div class="card-body">
-                                <h5 class="card-title">Paris</h5>
-                                <p class="text-muted">Romantic city of love and lights.</p>
-                                <p class="fw-bold">$1500</p>
-                                <a asp-controller="Home" asp-action="Book" asp-route-place="Paris" asp-route-img="/images/paris.jpg" asp-route-price="1500" class="btn btn-warning">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="~/images/tour-img06.jpg" class="card-img-top" alt="Dubai">
-                            <div class="card-body">
-                                <h5 class="card-title">Dubai</h5>
-                                <p class="text-muted">Luxury & modern architecture.</p>
-                                <p class="fw-bold">$2000</p>
-                                <a asp-controller="Home" asp-action="Book" asp-route-place="Dubai" asp-route-img="/images/dubai.jpg" asp-route-price="2000" class="btn btn-warning">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-        </section>
+
+            <!-- Paris 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="~/images/tour-img02.jpg" class="card-img-top" alt="Paris">
+                    <div class="card-body">
+                        <h5 class="card-title">Paris</h5>
+                        <p class="text-muted">Eiffel Tower and fine dining await you.</p>
+                        <p class="fw-bold">$1500</p>
+                        <a asp-controller="Booking" asp-action="Book"
+                           asp-route-destination="Paris"
+                           asp-route-img="/images/tour-img02.jpg"
+                           asp-route-price="1500"
+                           class="btn btn-warning">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paris 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="~/images/tour-img03.jpg" class="card-img-top" alt="Paris">
+                    <div class="card-body">
+                        <h5 class="card-title">Paris</h5>
+                        <p class="text-muted">Museums, fashion, and culture galore.</p>
+                        <p class="fw-bold">$1500</p>
+                        <a asp-controller="Booking" asp-action="Book"
+                           asp-route-destination="Paris"
+                           asp-route-img="/images/tour-img03.jpg"
+                           asp-route-price="1500"
+                           class="btn btn-warning">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paris 4 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="~/images/tour-img04.jpg" class="card-img-top" alt="Paris">
+                    <div class="card-body">
+                        <h5 class="card-title">Paris</h5>
+                        <p class="text-muted">Explore charming streets and cafés.</p>
+                        <p class="fw-bold">$1500</p>
+                        <a asp-controller="Booking" asp-action="Book"
+                           asp-route-destination="Paris"
+                           asp-route-img="/images/tour-img04.jpg"
+                           asp-route-price="1500"
+                           class="btn btn-warning">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paris 5 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="~/images/tour-img05.jpg" class="card-img-top" alt="Paris">
+                    <div class="card-body">
+                        <h5 class="card-title">Paris</h5>
+                        <p class="text-muted">Stunning architecture and history.</p>
+                        <p class="fw-bold">$1500</p>
+                        <a asp-controller="Booking" asp-action="Book"
+                           asp-route-destination="Paris"
+                           asp-route-img="/images/tour-img05.jpg"
+                           asp-route-price="1500"
+                           class="btn btn-warning">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dubai -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="~/images/tour-img06.jpg" class="card-img-top" alt="Dubai">
+                    <div class="card-body">
+                        <h5 class="card-title">Dubai</h5>
+                        <p class="text-muted">Luxury, shopping, and desert adventures.</p>
+                        <p class="fw-bold">$2000</p>
+                        <a asp-controller="Booking" asp-action="Book"
+                           asp-route-destination="Dubai"
+                           asp-route-img="/images/tour-img06.jpg"
+                           asp-route-price="2000"
+                           class="btn btn-warning">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
 <!-- Experience Section -->
-<section id="experience" class="container-fluid py-5">
-<section class="container my-5">
-    <div class="row align-items-center">
-        <!-- Left Content -->
-        <div class="col-md-6" data-aos="fade-right">
-            <h5 class="text-warning fw-bold">Experience</h5>
-            <h2 class="fw-bold">With all our experience, we will serve you</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas aliquam, hic tempora inventore suscipit unde.</p>
-            <div class="row mt-4">
-                <div class="col-4 text-center">
-                    <h3 class="fw-bold text-warning">12k+</h3>
-                    <p>Successful trips</p>
-                </div>
-                <div class="col-4 text-center">
-                    <h3 class="fw-bold text-warning">2k+</h3>
-                    <p>Regular clients</p>
-                </div>
-                <div class="col-4 text-center">
-                    <h3 class="fw-bold text-warning">15</h3>
-                    <p>Years experience</p>
+<section id="experience" class="container-fluid py-5 my-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Content -->
+            <div class="col-md-6" data-aos="fade-right">
+                <h5 class="text-warning fw-bold">Experience</h5>
+                <h2 class="fw-bold">With all our experience, we will serve you</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas aliquam, hic tempora inventore suscipit unde.</p>
+                <div class="row mt-4">
+                    <div class="col-4 text-center">
+                        <h3 class="fw-bold text-warning">12k+</h3>
+                        <p>Successful trips</p>
+                    </div>
+                    <div class="col-4 text-center">
+                        <h3 class="fw-bold text-warning">2k+</h3>
+                        <p>Regular clients</p>
+                    </div>
+                    <div class="col-4 text-center">
+                        <h3 class="fw-bold text-warning">15</h3>
+                        <p>Years experience</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Right Image -->
-        <div class="col-md-6 text-center" data-aos="fade-left">
-            <div class="position-relative">
-                <img src="/images/experience.png" class="img-fluid" alt="Traveler Experience">
-                <span class="badge bg-light text-dark position-absolute top-0 start-50 translate-middle-x">
-                    Los Angeles
-                </span>
-                @* <div class="position-absolute bottom-0 end-0 bg-white p-2 shadow-sm rounded"> *@
-                @*     <img src="/images/mountain-hiking.jpg" class="img-fluid" alt="Mountain Hiking" width="50"> *@
-                @*     <span>Mountain Hiking</span> *@
-                @*     <small class="d-block text-muted">See details &bullet; <a href="#">Join Now</a></small> *@
-                @* </div> *@
+            <!-- Right Image -->
+            <div class="col-md-6 text-center" data-aos="fade-left">
+                <div class="position-relative">
+                    <img src="/images/experience.png" class="img-fluid" alt="Traveler Experience">
+                    <span class="badge bg-light text-dark position-absolute top-0 start-50 translate-middle-x">
+                        Los Angeles
+                    </span>
+                </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Gallery Section -->
-<section class="container my-5">
-    <h5 class="text-warning fw-bold">Gallery</h5>
-    <h2 class="fw-bold">Visit our customers' tour gallery</h2>
 
-    <div class="row g-3 mt-4">
-        <div class="col-md-3">
-            <img src="/images/gallery-01.jpg" class="img-fluid rounded" alt="Tour Image 1">
-        </div>
-        <div class="col-md-3">
-            <img src="/images/gallery-02.jpg" class="img-fluid rounded" alt="Tour Image 2">
-        </div>
-        <div class="col-md-3">
-            <img src="/images/gallery-03.jpg" class="img-fluid rounded" alt="Tour Image 3">
-        </div>
-        <div class="col-md-3">
-            <img src="/images/gallery-04.jpg" class="img-fluid rounded" alt="Tour Image 4">
-        </div>
+    <!-- Gallery Section -->
+    <section class="container my-5">
+        <h5 class="text-warning fw-bold">Gallery</h5>
+        <h2 class="fw-bold">Visit our customers' tour gallery</h2>
 
-        <div class="col-md-3">
-            <img src="/images/gallery-05.jpg" class="img-fluid rounded" alt="Tour Image 5">
-        </div>
-        <div class="col-md-3">
-            <img src="/images/gallery-06.jpg" class="img-fluid rounded" alt="Tour Image 6">
-        </div>
-        <div class="col-md-3">
-            <img src="/images/gallery-07.jpg" class="img-fluid rounded" alt="Tour Image 7">
-        </div>
-        <div class="col-md-3">
-            <img src="/images/gallery-01.jpg" class="img-fluid rounded" alt="Tour Image 8">
-        </div>
-    </div>
-</section>
+        <div class="row g-3 mt-4">
+            <div class="col-md-3">
+                <img src="/images/gallery-01.jpg" class="img-fluid rounded" alt="Tour Image 1">
+            </div>
+            <div class="col-md-3">
+                <img src="/images/gallery-02.jpg" class="img-fluid rounded" alt="Tour Image 2">
+            </div>
+            <div class="col-md-3">
+                <img src="/images/gallery-03.jpg" class="img-fluid rounded" alt="Tour Image 3">
+            </div>
+            <div class="col-md-3">
+                <img src="/images/gallery-04.jpg" class="img-fluid rounded" alt="Tour Image 4">
+            </div>
 
-<!-- Customer Reviews Section -->
-<section class="container my-5">
-    <h5 class="text-warning fw-bold text-center">Testimonials</h5>
-    <h2 class="fw-bold text-center">What Our Customers Say</h2>
+            <div class="col-md-3">
+                <img src="/images/gallery-05.jpg" class="img-fluid rounded" alt="Tour Image 5">
+            </div>
+            <div class="col-md-3">
+                <img src="/images/gallery-06.jpg" class="img-fluid rounded" alt="Tour Image 6">
+            </div>
+            <div class="col-md-3">
+                <img src="/images/gallery-07.jpg" class="img-fluid rounded" alt="Tour Image 7">
+            </div>
+            <div class="col-md-3">
+                <img src="/images/gallery-01.jpg" class="img-fluid rounded" alt="Tour Image 8">
+            </div>
+        </div>
+    </section>
 
-    <div id="customerReviewsCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
+    <!-- Customer Reviews Section -->
+    <section class="container my-5">
+        <h5 class="text-warning fw-bold text-center">Testimonials</h5>
+        <h2 class="fw-bold text-center">What Our Customers Say</h2>
 
-            <!-- First Slide (Reviews 1, 2, 3) -->
-            <div class="carousel-item active">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="review-card text-center p-3">
-                            <img src="/images/review1.jpg" class="review-img rounded-circle" alt="Customer 1">
-                            <h5 class="mt-3">Suzan</h5>
-                            <p>"Amazing experience! Highly recommended!"</p>
+        <div id="customerReviewsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <!-- First Slide (Reviews 1, 2, 3) -->
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="review-card text-center p-3">
+                                <img src="/images/review1.jpg" class="review-img rounded-circle" alt="Customer 1">
+                                <h5 class="mt-3">Suzan</h5>
+                                <p>"Amazing experience! Highly recommended!"</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="review-card text-center p-3">
-                            <img src="/images/review4.jpg" class="review-img rounded-circle" alt="Customer 2">
-                            <h5 class="mt-3">Emma Wilson</h5>
-                            <p>"Best travel agency! Will book again!"</p>
+                        <div class="col-md-4">
+                            <div class="review-card text-center p-3">
+                                <img src="/images/review4.jpg" class="review-img rounded-circle" alt="Customer 2">
+                                <h5 class="mt-3">Emma Wilson</h5>
+                                <p>"Best travel agency! Will book again!"</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="review-card text-center p-3">
-                            <img src="/images/review3.jpg" class="review-img rounded-circle" alt="Customer 3">
-                            <h5 class="mt-3">Michael Smith</h5>
-                            <p>"Fantastic service and beautiful destinations!"</p>
+                        <div class="col-md-4">
+                            <div class="review-card text-center p-3">
+                                <img src="/images/review3.jpg" class="review-img rounded-circle" alt="Customer 3">
+                                <h5 class="mt-3">Michael Smith</h5>
+                                <p>"Fantastic service and beautiful destinations!"</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Second Slide (Reviews 4, 5, 6) -->
-            <div class="carousel-item">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="review-card text-center p-3">
-                            <img src="/images/review3.jpg" class="review-img rounded-circle" alt="Customer 4">
-                            <h5 class="mt-3">Olivia</h5>
-                            <p>"Super easy booking process. Loved it!"</p>
+                <!-- Second Slide (Reviews 4, 5, 6) -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="review-card text-center p-3">
+                                <img src="/images/review3.jpg" class="review-img rounded-circle" alt="Customer 4">
+                                <h5 class="mt-3">Olivia</h5>
+                                <p>"Super easy booking process. Loved it!"</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="review-card text-center p-3">
-                            <img src="/images/review4.jpg" class="review-img rounded-circle" alt="Customer 5">
-                            <h5 class="mt-3">Liam</h5>
-                            <p>"Professional and friendly guides. Loved the experience!"</p>
+                        <div class="col-md-4">
+                            <div class="review-card text-center p-3">
+                                <img src="/images/review4.jpg" class="review-img rounded-circle" alt="Customer 5">
+                                <h5 class="mt-3">Liam</h5>
+                                <p>"Professional and friendly guides. Loved the experience!"</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="review-card text-center p-3">
-                            <img src="/images/review1.jpg" class="review-img rounded-circle" alt="Customer 6">
-                            <h5 class="mt-3">Sophia</h5>
-                            <p>"Highly recommended for family trips!"</p>
+                        <div class="col-md-4">
+                            <div class="review-card text-center p-3">
+                                <img src="/images/review1.jpg" class="review-img rounded-circle" alt="Customer 6">
+                                <h5 class="mt-3">Sophia</h5>
+                                <p>"Highly recommended for family trips!"</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Third Slide (Reviews 7, 8, 9) -->
-            <div class="carousel-item">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="review-card text-center p-3">
-                            <img src="/images/review1.jpg" class="review-img rounded-circle" alt="Customer 7">
-                            <h5 class="mt-3">Ethan</h5>
-                            <p>"Had a wonderful experience, highly professional!"</p>
+                <!-- Third Slide (Reviews 7, 8, 9) -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="review-card text-center p-3">
+                                <img src="/images/review1.jpg" class="review-img rounded-circle" alt="Customer 7">
+                                <h5 class="mt-3">Ethan</h5>
+                                <p>"Had a wonderful experience, highly professional!"</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="review-card text-center p-3">
-                            <img src="/images/review4.jpg" class="review-img rounded-circle" alt="Customer 8">
-                            <h5 class="mt-3">Ava</h5>
-                            <p>"Memorable vacation! 5 stars service!"</p>
+                        <div class="col-md-4">
+                            <div class="review-card text-center p-3">
+                                <img src="/images/review4.jpg" class="review-img rounded-circle" alt="Customer 8">
+                                <h5 class="mt-3">Ava</h5>
+                                <p>"Memorable vacation! 5 stars service!"</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="review-card text-center p-3">
-                            <img src="/images/review4.jpg" class="review-img rounded-circle" alt="Customer 9">
-                            <h5 class="mt-3">James</h5>
-                            <p>"Superb agency! Will book again for my next trip!"</p>
+                        <div class="col-md-4">
+                            <div class="review-card text-center p-3">
+                                <img src="/images/review4.jpg" class="review-img rounded-circle" alt="Customer 9">
+                                <h5 class="mt-3">James</h5>
+                                <p>"Superb agency! Will book again for my next trip!"</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
 
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#customerReviewsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#customerReviewsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
+    </section>
 
-        <!-- Carousel Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#customerReviewsCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#customerReviewsCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-</section>
-
-<!-- Subscription Section -->
-<section class="container-fluid bg-lightblue py-5">
-    <div class="container text-center">
-        <h2 class="fw-bold">Subscribe now to get useful traveling information.</h2>
-        <div class="mt-3">
-            <input type="email" class="form-control d-inline-block w-50" placeholder="Enter your email">
-            <button class="btn btn-warning">Subscribe</button>
-        </div>
-        <p class="mt-3 text-muted">Stay updated with the latest travel tips, exclusive deals, and destination guides.</p>
-    </div>
-</section>
-
-                <!-- Footer Section -->
-                <footer class="container-fluid bg-light py-5">
-                    <div class="container">
-                        <div class="row">
-                            <!-- Logo & Description -->
-                            <div class="col-md-4">
-                                <h4 class="fw-bold"><span class="text-warning">TRAVEL</span>BUDDY</h4>
-                                <p>Your trusted companion for amazing travel experiences and adventures.</p>
-                                <div>
-                                    <a href="https://www.youtube.com/yourchannel" target="_blank">
-                                        <i class="bi bi-youtube fs-3 text-danger mx-2"></i>
-                                    </a>
-                                    <a href="https://www.facebook.com/yourpage" target="_blank">
-                                        <i class="bi bi-facebook fs-3 text-primary mx-2"></i>
-                                    </a>
-                                    <a href="https://www.instagram.com/yourhandle" target="_blank">
-                                        <i class="bi bi-instagram fs-3 text-warning mx-2"></i>
-                                    </a>
-                                </div>
-                            </div>
+   
 
 
-                            <!-- Discover Links -->
-                            <div class="col-md-2">
-                                <h5 class="fw-bold">Discover</h5>
-                                <ul class="list-unstyled">
-                                    <li><a href="index.cshtml#home" class="text-muted">Home</a></li>
-                                    <li><a href="index.cshtml#about" class="text-muted">About</a></li>
-                                    <li><a href="index.cshtml#tour" class="text-muted">Tours</a></li>
-                                </ul>
-                            </div>
+    <!-- Styles -->
+    <style>
 
-                            <!-- Quick Links -->
-                            <div class="col-md-2">
-                                <h5 class="fw-bold">Quick Links</h5>
-                                <ul class="list-unstyled">
-                                    <li><a href="index.cshtml#gallery" class="text-muted">Gallery</a></li>
-                                    <li><a href="index.cshtml#login" class="text-muted">Login</a></li>
-                                    <li><a href="index.cshtml#register" class="text-muted">Register</a></li>
-                                </ul>
-                            </div>
-
-                            <!-- Contact Info -->
-                            <div class="col-md-4">
-                                <h5 class="fw-bold">Contact</h5>
-                                <p><i class="bi bi-geo-alt"></i> Rajkot, Gujarat</p>
-                                <p><i class="bi bi-envelope"></i> <a href="mailto:travel@gmail.com" class="text-muted">travel@gmail.com</a></p>
-                                <p><i class="bi bi-telephone"></i> <a href="tel:+9854765123" class="text-muted">+98 547 65123</a></p>
-                            </div>
-                        </div>
-
-                        <hr>
-                        <p class="text-center text-muted">
-                            Copyright &copy; 2023, designed and developed by Khushnuma. All rights reserved.
-                        </p>
-                    </div>
-                </footer>
-
-<!-- Styles -->
-<style>
-    .hero-section {
-        padding: 60px 0;
-        background: #f9f9f9;
-    }
-
-    .search-bar {
-        background: #fff;
-        border-radius: 12px;
-    }
-
-        .search-bar .btn {
-            background-color: #f39c12;
-            border: none;
-            color: #fff;
-            font-weight: bold;
+        .hero-section {
+            padding: 60px 0;
+            background: #f9f9f9;
         }
 
-    h1 span {
-        color: #f39c12;
-    }
-
-    .media-item {
-        height: 220px;
-        width: 220px;
-        border-radius: 10px;
-        object-fit: cover;
-        box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-        .media-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+        .search-bar {
+            background: #fff;
+            border-radius: 12px;
         }
 
-    .services-section {
-        padding: 60px 0;
-        background: #fff;
-        text-align: center;
-    }
+            .search-bar .btn {
+                background-color: #f39c12;
+                border: none;
+                color: #fff;
+                font-weight: bold;
+            }
 
-    .service-cards {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        margin-top: 30px;
-    }
-
-    .service-card {
-        background: #f9f9f9;
-        padding: 20px;
-        border-radius: 12px;
-        width: 250px;
-        text-align: center;
-        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s;
-    }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .service-card .icon {
-            font-size: 30px;
+        h1 span {
             color: #f39c12;
-            margin-bottom: 10px;
         }
 
-    .review-card {
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-    }
+        .media-item {
+            height: 220px;
+            width: 220px;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    .review-img {
-        width: 80px;
-        height: 80px;
-        object-fit: cover;
-    }
+            .media-item:hover {
+                transform: scale(1.05);
+                box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+            }
 
-    .review-stars i {
-        font-size: 18px;
-    }
+        .services-section {
+            padding: 60px 0;
+            background: #fff;
+            text-align: center;
+        }
 
-    .bg-lightblue {
-        background-color: #CFE8FF; /* Light blue background */
-    }
+        .service-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
 
-    footer a {
-        text-decoration: none;
-    }
+        .service-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 12px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
 
-    .bi {
-        font-size: 1.2rem;
-        color: gray;
-    }
-</style>
+            .service-card:hover {
+                transform: translateY(-5px);
+            }
 
-<!-- Font Awesome & AOS Library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-<!-- Bootstrap Icons CDN -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+            .service-card .icon {
+                font-size: 30px;
+                color: #f39c12;
+                margin-bottom: 10px;
+            }
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-    AOS.init({
-        duration: 1000,
-        once: true,
-    });
-</script>
+        .review-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
 
-<!-- Auto-Swipe Script -->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let carousel = new bootstrap.Carousel(document.getElementById('customerReviewsCarousel'), {
-            interval: 4000, // Change slide every 4 seconds
-            ride: "carousel"
+        .review-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+
+        .review-stars i {
+            font-size: 18px;
+        }
+
+    </style>
+
+    <!-- Font Awesome & AOS Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
         });
-    });
-</script>
+    </script>
+
+    <!-- Auto-Swipe Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let carousel = new bootstrap.Carousel(document.getElementById('customerReviewsCarousel'), {
+                interval: 4000, // Change slide every 4 seconds
+                ride: "carousel"
+            });
+        });
+    </script>

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<string>
+@{
+    ViewData["Title"] = "Gallery";
+}
+
+<!-- Lightbox CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+
+<section class="container-fluid py-5">
+    <div class="container">
+        <h2 class="text-center mb-4 fw-bold">Photo Gallery</h2>
+
+        <!-- Gallery Grid -->
+        <div class="row g-4 mb-5">
+            @if (Model != null && Model.Any())
+            {
+                foreach (var image in Model)
+                {
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <a href="@Url.Content($"~/images/gallery/{image}")" data-lightbox="gallery" data-title="@image">
+                            <img src="@Url.Content($"~/images/gallery/{image}")" class="img-fluid rounded shadow" alt="@image">
+                        </a>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="text-center text-muted">No images in gallery yet.</div>
+            }
+        </div>
+
+        <!-- Upload Button (Bottom of Gallery) -->
+        <div class="text-center">
+            <form asp-action="Upload" method="post" enctype="multipart/form-data" class="d-inline-block">
+                <input type="file" name="ImageFile" id="ImageFile" accept="image/*" onchange="this.form.submit()" style="display:none;" />
+                <label for="ImageFile" class="btn btn-warning rounded-pill shadow upload-label">
+                    📷 Upload New Image
+                </label>
+            </form>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+}

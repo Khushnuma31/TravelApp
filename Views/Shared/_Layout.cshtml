@@ -5,31 +5,167 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel App</title>
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Lightbox2 CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="~/css/site.css">
+    <link rel="stylesheet" href="@Url.Content("~/css/site.css")" />
+
+    <style>
+        .navbar-nav .nav-link {
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease, font-weight 0.3s ease;
+        }
+
+            .navbar-nav .nav-link:hover {
+                color: #f39c12;
+                font-weight: bold;
+            }
+
+            .navbar-nav .nav-link.active-nav {
+                color: #f39c12;
+                font-weight: bold;
+            }
+
+
+        .bg-lightblue {
+            background-color: #CFE8FF;
+        }
+
+        footer a {
+            text-decoration: none;
+        }
+
+        .bi {
+            font-size: 1.2rem;
+            color: gray;
+        }
+    </style>
 </head>
 <body>
-    
 
-    <div class="container mt-4">
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                @* <img src="@Url.Content("~/images/logo.png")" alt="Travel World Logo" style="height: 40px; margin-right: 10px;"> *@
+                <span style="font-weight: bold; color: #f39c12;">TRAVEL<span style="color: #333;">BUDDY</span></span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav me-3">
+                        <li class="nav-item">
+                            <a asp-controller="Home" asp-action="Index" class="nav-link text-dark fw-bold">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="Home" asp-action="About" class="nav-link text-dark">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="Tours" asp-action="AllTours" class="nav-link text-dark">Tours</a>
+                        </li>
+                    <li class="nav-item">
+                        <a asp-controller="Gallery" asp-action="Gallery" class="nav-link text-dark">Gallery</a>
+                    </li>
+                    </ul>
+                    <div class="d-flex gap-2">
+                        <a asp-controller="Account" asp-action="Login" class="btn btn-outline-primary me-2">Login</a>
+                        <a asp-controller="Account" asp-action="Register" class="btn btn-primary">Register</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    <!-- Main Content -->
+    <main class="container mt-4">
         @RenderBody()
-    </div>
+    </main>
 
-    <!-- Bootstrap JS -->
+    <!-- Subscription Section -->
+    <section class="container-fluid bg-lightblue py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold">Subscribe now to get useful traveling information.</h2>
+            <div class="mt-3">
+                <input type="email" class="form-control d-inline-block w-50" placeholder="Enter your email">
+                <button class="btn btn-warning">Subscribe</button>
+            </div>
+            <p class="mt-3 text-muted">Stay updated with the latest travel tips, exclusive deals, and destination guides.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="container-fluid bg-light py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <!-- Logo & Description -->
+                <div class="col-md-4">
+                    <h4 class="fw-bold"><span class="text-warning">TRAVEL</span>BUDDY</h4>
+                    <p>Your trusted companion for amazing travel experiences and adventures.</p>
+                    <div>
+                        <a href="https://www.youtube.com/yourchannel" target="_blank">
+                            <i class="bi bi-youtube fs-3 text-danger mx-2"></i>
+                        </a>
+                        <a href="https://www.facebook.com/yourpage" target="_blank">
+                            <i class="bi bi-facebook fs-3 text-primary mx-2"></i>
+                        </a>
+                        <a href="https://www.instagram.com/yourhandle" target="_blank">
+                            <i class="bi bi-instagram fs-3 text-warning mx-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Discover Links -->
+                <div class="col-md-2">
+                    <h5 class="fw-bold">Discover</h5>
+                    <ul class="list-unstyled">
+                        <li><a asp-controller="Home" asp-action="Index" class="text-muted">Home</a></li>
+                        <li><a asp-controller="Home" asp-action="About" class="text-muted">About</a></li>
+                        <li><a asp-controller="Tours" asp-action="AllTours" class="text-muted">Tours</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-2">
+                    <h5 class="fw-bold">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a asp-controller="Gallery" asp-action="Gallery" class="text-muted">Gallery</a></li>
+                        <li><a asp-controller="Account" asp-action="Login" class="text-muted">Login</a></li>
+                        <li><a asp-controller="Account" asp-action="Register" class="text-muted">Register</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Contact Info -->
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Contact</h5>
+                    <p><i class="bi bi-geo-alt"></i> Rajkot, Gujarat</p>
+                    <p><i class="bi bi-envelope"></i> <a href="mailto:travel@gmail.com" class="text-muted">travel@gmail.com</a></p>
+                    <p><i class="bi bi-telephone"></i> <a href="tel:+9854765123" class="text-muted">+98 547 65123</a></p>
+                </div>
+            </div>
+
+            <hr>
+            <p class="text-center text-muted">
+                Copyright &copy; 2023, designed and developed by Khushnuma. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Lightbox2 JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="@Url.Content("~/js/gallery.js")"></script>
 
-    <!-- Custom JS -->
-    <script src="~/js/gallery.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

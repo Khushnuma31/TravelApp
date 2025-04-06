@@ -1,0 +1,102 @@
+﻿@model TravelApp.Models.BookingViewModel
+@{
+    ViewData["Title"] = "Book Your Trip";
+
+    // Image logic (edit this anytime!)
+    string imageFileName = Model.Destination.ToLower() switch
+    {
+        "bali" => "tour-img001.jpg",
+        "tokyo" => "tour-img002.jpg",
+        "sydney" => "tour-img003.jpg",
+        "rome" => "tour-img004.jpg",
+        _ => "tour-default.jpg"
+    };
+
+    string imagePath = Url.Content($"~/images/{imageFileName}");
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/styles.css" />
+</head>
+<body>
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">Travel<span class="text-warning">Buddy</span></a>
+        </div>
+    </nav>
+
+    <section class="container my-4">
+        <img src="@imagePath" alt="@Model.Destination" class="img-fluid rounded shadow w-100 mb-4" />
+    </section>
+
+    <section class="container pb-5">
+        <h2 class="text-center fw-bold">Book Your Trip to @Model.Destination</h2>
+        <p class="text-center text-muted mb-4">@Model.Description</p>
+
+        <form asp-action="ConfirmBooking" method="post" class="w-50 mx-auto bg-light p-4 rounded shadow">
+            <input type="hidden" name="Destination" value="@Model.Destination" />
+            <input type="hidden" name="ImageUrl" value="@imagePath" />
+            <input type="hidden" name="PricePerPerson" value="@Model.Price" />
+
+            <div class="mb-3">
+                <label class="form-label fw-bold">Full Name</label>
+                <input type="text" class="form-control" name="UserName" required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold">Phone Number</label>
+                <input type="text" class="form-control" name="Phone" required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold">Travel Date</label>
+                <input type="date" class="form-control" name="Date" required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold">Number of Guests</label>
+                <input type="number" class="form-control" name="Guests" id="guestCount" value="1" min="1" required />
+            </div>
+
+            <hr />
+            <div class="d-flex justify-content-between">
+                <span>@Model.Price.ToString("C") x <span id="guestDisplay">1</span> guests</span>
+                <span id="subtotal">@Model.Price.ToString("C")</span>
+            </div>
+            <div class="d-flex justify-content-between">
+                <span>Service Fee</span>
+                <span>$10.00</span>
+            </div>
+            <div class="d-flex justify-content-between fw-bold">
+                <span>Total</span>
+                <span id="totalAmount">$@(Model.Price + 10)</span>
+            </div>
+
+            <button type="submit" class="btn btn-warning w-100 mt-3">Confirm Booking</button>
+        </form>
+    </section>
+
+    <script>
+        const guestInput = document.getElementById('guestCount');
+        const guestDisplay = document.getElementById('guestDisplay');
+        const subtotal = document.getElementById('subtotal');
+        const total = document.getElementById('totalAmount');
+        const pricePerPerson = @Model.Price;
+        const serviceFee = 10;
+
+        guestInput.addEventListener('input', () => {
+            const guests = parseInt(guestInput.value) || 1;
+            guestDisplay.textContent = guests;
+            subtotal.textContent = `$${(pricePerPerson * guests).toFixed(2)}`;
+            total.textContent = `$${(pricePerPerson * guests + serviceFee).toFixed(2)}`;
+        });
+    </script>
+
+</body>
+</html>
