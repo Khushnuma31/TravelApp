@@ -1,0 +1,270 @@
+﻿@model TravelApp.Models.BookingViewModel
+
+@{
+    ViewData["Title"] = "Book a Tour";
+    var tour = ViewBag.Tour as TravelApp.Models.Tour;
+    var minDate = DateTime.Today.ToString("yyyy-MM-dd");
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            gap: 20px;
+        }
+
+        .tour-image {
+            flex: 2;
+            background: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+            .tour-image img {
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+
+        .tour-details {
+            flex: 1;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+            .tour-details h2 {
+                margin: 0 0 10px;
+                font-size: 1.5em;
+            }
+
+            .tour-details .rating {
+                color: #f39c12;
+                margin-bottom: 10px;
+            }
+
+            .tour-details .meta {
+                color: #666;
+                margin-bottom: 10px;
+            }
+
+            .tour-details .description {
+                margin-top: 20px;
+                color: #333;
+            }
+
+        .booking-form {
+            flex: 1;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+            .booking-form label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+
+            .booking-form input {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .booking-form .summary {
+                margin-top: 20px;
+            }
+
+                .booking-form .summary p {
+                    margin: 5px 0;
+                }
+
+            .booking-form .btn {
+                background: #f39c12;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                width: 100%;
+                margin-top: 20px;
+            }
+
+                .booking-form .btn:hover {
+                    background: #e08e0c;
+                }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tour-image">
+            <img src="@tour?.ImageUrl" alt="@tour?.Destination" />
+        </div>
+        <div class="tour-details">
+            <h2>@tour?.Destination</h2>
+            <div class="rating">★ @tour?.Rating (32)</div>
+            <div class="meta">@tour?.Destination, 999 km, 10 days</div>
+            <div class="description">
+                <strong>Description</strong>
+                <p>@tour?.Description</p>
+            </div>
+        </div>
+        <div class="booking-form">
+            <p>$@tour?.Price per person</p>
+            @if (ViewData.ModelState.ErrorCount > 0)
+            {
+                <div class="error">
+                    @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                    {
+                        <p>@error.ErrorMessage</p>
+                    }
+                </div>
+            }
+            <form asp-action="ConfirmBooking" method="post" id="bookingForm">
+                <input type="hidden" asp-for="TourId" />
+
+                <div class="form-group">
+                    <label asp-for="FullName"></label>
+                    <input asp-for="FullName" class="form-control" />
+                    <span asp-validation-for="FullName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Phone"></label>
+                    <input asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="BookingDate"></label>
+                    <input asp-for="BookingDate" type="date" class="form-control" min="@minDate" data-val-futuredate="true" />
+                    <span asp-validation-for="BookingDate" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="GuestCount"></label>
+                    <input asp-for="GuestCount" class="form-control" id="guestCount" />
+                    <span asp-validation-for="GuestCount" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Service Charge</label>
+                    <p class="form-control-plaintext">$10</p>
+                </div>
+
+                <div class="summary">
+                    <p>Base Price: <span id="basePrice">$@tour?.Price x 1 person</span></p>
+                    <p>Service Charge: $10</p>
+                    <p><strong>Total: $<span id="totalPrice">@((tour?.Price ?? 0) + 10)</span></strong></p>
+                </div>
+
+                <button type="submit" class="btn" id="payBtn">Pay Now</button>
+            </form>
+
+            <!-- Hidden form to complete booking after payment -->
+            <form id="completeBookingForm" asp-action="CompleteBooking" method="post" style="display:none;">
+                <input type="hidden" asp-for="TourId" />
+                <input type="hidden" asp-for="FullName" />
+                <input type="hidden" asp-for="Phone" />
+                <input type="hidden" asp-for="BookingDate" />
+                <input type="hidden" asp-for="GuestCount" />
+                <input type="hidden" name="razorpayPaymentId" id="razorpayPaymentId" />
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Custom validation rule for future date
+            $.validator.addMethod("futuredate", function (value, element) {
+                var today = new Date().setHours(0, 0, 0, 0);
+                var inputDate = new Date(value);
+                return inputDate > today;
+            }, "Booking date must be after today.");
+
+            $.validator.unobtrusive.adapters.addBool("futuredate");
+
+            // Dynamic bill calculation
+            $('#guestCount').on('input', function () {
+                var guestCount = $(this).val() || 1;
+                var pricePerPerson = @(tour?.Price ?? 0);
+                var serviceCharge = 10;
+                var subtotal = pricePerPerson * guestCount;
+                var total = subtotal + serviceCharge;
+
+                $('#basePrice').text('$' + pricePerPerson + ' x ' + guestCount + ' person');
+                $('#totalPrice').text(total.toFixed(2));
+            });
+
+            // Populate hidden form with current values before payment
+            $('#payBtn').on('click', function (e) {
+                if ($('#bookingForm').valid()) {
+                    var guestCount = parseInt($('#guestCount').val()) || 1;
+                    var pricePerPerson = @(tour?.Price ?? 0);
+                    var serviceCharge = 10;
+                    var totalAmount = (pricePerPerson * guestCount + serviceCharge) * 100; // Convert to paise
+
+                    // Populate hidden form
+                    $('#completeBookingForm input[name="TourId"]').val($('#TourId').val());
+                    $('#completeBookingForm input[name="FullName"]').val($('#FullName').val());
+                    $('#completeBookingForm input[name="Phone"]').val($('#Phone').val());
+                    $('#completeBookingForm input[name="BookingDate"]').val($('#BookingDate').val());
+                    $('#completeBookingForm input[name="GuestCount"]').val(guestCount);
+
+                    var options = {
+                        "key": "rzp_test_jQOReseIWUxIfd", // Test key
+                        "amount": totalAmount.toString(), // in paise
+                        "currency": "INR",
+                        "name": "TravelWorld",
+                        "description": "Advance Booking Payment",
+                        "handler": function (response) {
+                            $('#razorpayPaymentId').val(response.razorpay_payment_id);
+                            $('#completeBookingForm').submit(); // Submit hidden form with payment ID
+                        },
+                        "theme": {
+                            "color": "#ff9800"
+                        }
+                    };
+
+                    var rzp1 = new Razorpay(options);
+                    rzp1.open();
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

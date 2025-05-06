@@ -1,0 +1,161 @@
+﻿@model TravelApp.Models.HomeViewModel
+
+@{
+    ViewData["Title"] = "Tours";
+}
+
+<link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+
+<!-- Navbar -->
+<header class="navbar">
+    <div class="navbar-container container">
+        <a href="/" class="navbar-brand">
+            <span>TRAVEL</span><span>WORLD</span>
+        </a>
+        <nav class="navbar-links">
+            <a href="@Url.Action("Index", "Home")">Home</a>
+            <a href="@Url.Action("About", "Home")">About</a>
+            <a href="@Url.Action("Tours", "Home")">Tours</a>
+            @if (User.IsInRole("Admin"))
+            {
+                <a href="/Admin">Admin Panel</a>
+            }
+        </nav>
+        <div class="navbar-actions">
+            @if (Context.Session.GetString("Username") != null)
+            {
+                <span class="navbar-text me-3" style="align-self: center; color: var(--heading-color);">
+                    Hi, @Context.Session.GetString("Username")!
+                </span>
+                <a asp-controller="Account" asp-action="Logout" class="btn btn-secondary login">Logout</a>
+            }
+            else if (User.Identity != null && User.Identity.IsAuthenticated)
+            {
+                <span class="navbar-text me-3" style="align-self: center; color: var(--heading-color);">
+                    Hi, @User.Identity.Name!
+                </span>
+                <a asp-controller="Account" asp-action="Logout" class="btn btn-secondary login">Logout</a>
+            }
+            else
+            {
+                <a href="/Account/Login" class="btn btn-secondary login">Login</a>
+                <a href="/Account/Register" class="btn register">Register</a>
+            }
+        </div>
+    </div>
+</header>
+
+<!-- Header Image -->
+<section class="hero-section" style="position: relative;">
+    <img src="/images/banner.jpg" alt="Header Image" style="width: 100%; height: 300px; object-fit: cover;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 24px; font-weight: bold;">All Tours</div>
+</section>
+
+<!-- Search Form -->
+<div class="search-form-container">
+    <form class="search-form container" asp-action="Search" method="post">
+        <div class="search-form-group">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+                <label for="location">Location</label>
+                <select id="location" name="location" asp-items="@Model.AvailableDestinations">
+                    <option value="">Where are you going?</option>
+                </select>
+            </div>
+        </div>
+        <div class="search-form-group">
+            <i class="fas fa-route"></i>
+            <div>
+                <label for="distance">Distance</label>
+                <input type="number" id="distance" name="distance" placeholder="Distance k/m">
+            </div>
+        </div>
+        <div class="search-form-group">
+            <i class="fas fa-users"></i>
+            <div>
+                <label for="maxPeople">Max People</label>
+                <input type="number" id="maxPeople" name="maxPeople" placeholder="0">
+            </div>
+        </div>
+        <div class="search-form-group">
+            <button type="submit" aria-label="Search"><i class="fas fa-search"></i></button>
+        </div>
+    </form>
+</div>
+
+<!-- Featured Tours Section -->
+<section class="tours">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">Explore</span>
+            <h2 class="section-title">Our featured tours</h2>
+        </div>
+        <div class="tours-grid">
+            @if (Model.Tours != null && Model.Tours.Any())
+            {
+                @foreach (var tour in Model.Tours)
+                {
+                    <div class="tour-card">
+                        <div class="tour-card-image">
+                            <img src="@Url.Content(tour.ImageUrl)" alt="@tour.Destination">
+                            @if (tour.Id <= 4)
+                            {
+                                <span class="featured-badge">Featured</span>
+                            }
+                        </div>
+                        <div class="tour-card-content">
+                            <div class="tour-card-location">
+                                <i class="fas fa-map-marker-alt"></i> @tour.Destination
+                            </div>
+                            <h3>@tour.Description</h3>
+                            <div class="tour-card-footer">
+                                <div>
+                                    <span class="price">$@tour.Price.ToString("F0") <span>/per person</span></span>
+                                </div>
+                                <div class="tour-rating">
+                                    @if (tour.Rating > 0)
+                                    {
+                                        <span class="stars">★</span>
+                                        <span>@tour.Rating.ToString("F1")</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="not-rated">Not rated</span>
+                                    }
+                                </div>
+                            </div>
+                            <a asp-controller="Booking" asp-action="Booking" asp-route-tourId="@tour.Id" class="btn book-now">Book Now</a>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>No tours available at the moment.</p>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter">
+    <div class="newsletter-container container">
+        <div class="newsletter-content">
+            <h2>Subscribe now to get useful traveling information.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati adipisci sunt in, provident facere ipsam?</p>
+            <form class="newsletter-form" asp-action="Subscribe" method="post">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="newsletter-image">
+            <img src="/images/male-tourist.png" alt="Tourist with camera">
+        </div>
+    </div>
+</section>
+
+
+@section Scripts {
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+}
+

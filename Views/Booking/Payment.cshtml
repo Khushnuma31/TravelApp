@@ -1,0 +1,37 @@
+@* @using TravelApp.Models *@
+@* @{ *@
+@*     ViewData["Title"] = "Payment"; *@
+@*     var booking = ViewBag.Booking as TravelApp.Models.Booking; *@
+@*     var userId = ViewBag.UserId as string; *@
+@* } *@
+
+@* <h2>Payment Confirmation</h2> *@
+
+@* @if (booking != null) *@
+@* { *@
+@*     <div> *@
+@*         <h3>Booking Details</h3> *@
+@*         <p><strong>Booking ID:</strong> @(booking.Id > 0 ? booking.Id.ToString() : "Not available")</p> *@
+@*         <p><strong>Full Name:</strong> @(string.IsNullOrEmpty(booking.FullName) ? "Not provided" : booking.FullName)</p> *@
+@*         <p><strong>Phone:</strong> @(string.IsNullOrEmpty(booking.Phone) ? "Not provided" : booking.Phone)</p> *@
+@*         <p><strong>Booking Date:</strong> @(booking.BookingDate != default ? booking.BookingDate.ToString("yyyy-MM-dd") : "Not set")</p> *@
+@*         <p><strong>Number of Guests:</strong> @(booking.GuestCount > 0 ? booking.GuestCount.ToString() : "Not set")</p> *@
+@*         <p><strong>Total Amount:</strong> $@(booking.TotalPrice > 0 ? booking.TotalPrice.ToString("F2") : "0.00")</p> *@
+@*         <p><strong>Payment ID:</strong> @(string.IsNullOrEmpty(booking.PaymentId) ? "Pending" : booking.PaymentId)</p> *@
+@*     </div> *@
+@* } *@
+@* else *@
+@* { *@
+@*     <p>No booking details available.</p> *@
+@* } *@
+
+@* <div> *@
+@*     <h3>User Information</h3> *@
+@*     <p><strong>User ID:</strong> @(string.IsNullOrEmpty(userId) ? "Not available" : userId)</p> *@
+@*     <!-- Add more user details if available from authentication --> *@
+@* </div> *@
+
+@* <p>Processing payment...</p> *@
+
+@* <!-- You can add a button to allow the user to return to the home page --> *@
+@* <a asp-action="Index" asp-controller="Home" class="btn btn-primary">Return to Home</a> *@

@@ -1,0 +1,57 @@
+﻿@model TravelApp.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Admin Login";
+}
+
+<div class="auth-container">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="text-center">Admin Login</h2>
+                    </div>
+                    <div class="card-body">
+                        <form asp-controller="Admin" asp-action="Login" method="post">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                            <div class="form-group mb-3">
+                                <label asp-for="UsernameOrEmail" class="control-label"></label>
+                                <input asp-for="UsernameOrEmail" class="form-control" />
+                                <span asp-validation-for="UsernameOrEmail" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label asp-for="Password" class="control-label"></label>
+                                <input asp-for="Password" class="form-control" type="password" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <div class="checkbox">
+                                    <label>
+                                        <input asp-for="RememberMe" /> @Html.DisplayNameFor(m => m.RememberMe)
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-primary">Admin Login</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                        <p>Regular user? <a asp-controller="Account" asp-action="Login">User Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

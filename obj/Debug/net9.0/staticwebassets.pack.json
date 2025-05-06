@@ -1,0 +1,469 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\TravelApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\TravelApp.pqc7hi1cky.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\Gallery\\gallery-01.jpg",
+      "PackagePath": "staticwebassets\\images\\Gallery\\gallery-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\Gallery\\gallery-02.jpg",
+      "PackagePath": "staticwebassets\\images\\Gallery\\gallery-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\Gallery\\gallery-03.jpg",
+      "PackagePath": "staticwebassets\\images\\Gallery\\gallery-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\Gallery\\gallery-04.jpg",
+      "PackagePath": "staticwebassets\\images\\Gallery\\gallery-04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\Gallery\\gallery-05.jpg",
+      "PackagePath": "staticwebassets\\images\\Gallery\\gallery-05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\Gallery\\gallery-06.jpg",
+      "PackagePath": "staticwebassets\\images\\Gallery\\gallery-06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\Gallery\\gallery-07.jpg",
+      "PackagePath": "staticwebassets\\images\\Gallery\\gallery-07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\about.jpg",
+      "PackagePath": "staticwebassets\\images\\about.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\ava-1.jpg",
+      "PackagePath": "staticwebassets\\images\\ava-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\ava-2.jpg",
+      "PackagePath": "staticwebassets\\images\\ava-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\ava-3.jpg",
+      "PackagePath": "staticwebassets\\images\\ava-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\banner.jpg",
+      "PackagePath": "staticwebassets\\images\\banner.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\customization.png",
+      "PackagePath": "staticwebassets\\images\\customization.png"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\experience.png",
+      "PackagePath": "staticwebassets\\images\\experience.png"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\gallery-01.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\gallery-02.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\gallery-03.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\gallery-04.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery-04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\gallery-05.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery-05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\gallery-06.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery-06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\gallery-07.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery-07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\gallery-08.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery-08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\guide.png",
+      "PackagePath": "staticwebassets\\images\\guide.png"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\h1.jpeg",
+      "PackagePath": "staticwebassets\\images\\h1.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\h2.jpeg",
+      "PackagePath": "staticwebassets\\images\\h2.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\h3.jpeg",
+      "PackagePath": "staticwebassets\\images\\h3.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\h4.jpeg",
+      "PackagePath": "staticwebassets\\images\\h4.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\hero-img01.jpg",
+      "PackagePath": "staticwebassets\\images\\hero-img01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\hero-img02.jpg",
+      "PackagePath": "staticwebassets\\images\\hero-img02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\login.png",
+      "PackagePath": "staticwebassets\\images\\login.png"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\male-tourist.png",
+      "PackagePath": "staticwebassets\\images\\male-tourist.png"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\register.png",
+      "PackagePath": "staticwebassets\\images\\register.png"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\review1.jpg",
+      "PackagePath": "staticwebassets\\images\\review1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\review2.avif",
+      "PackagePath": "staticwebassets\\images\\review2.avif"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\review2.webp",
+      "PackagePath": "staticwebassets\\images\\review2.webp"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\review3.jpg",
+      "PackagePath": "staticwebassets\\images\\review3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\review4.jpg",
+      "PackagePath": "staticwebassets\\images\\review4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\tour-img01.jpg",
+      "PackagePath": "staticwebassets\\images\\tour-img01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\tour-img02.jpg",
+      "PackagePath": "staticwebassets\\images\\tour-img02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\tour-img03.jpg",
+      "PackagePath": "staticwebassets\\images\\tour-img03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\tour-img04.jpg",
+      "PackagePath": "staticwebassets\\images\\tour-img04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\tour-img05.jpg",
+      "PackagePath": "staticwebassets\\images\\tour-img05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\tour-img06.jpg",
+      "PackagePath": "staticwebassets\\images\\tour-img06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\tour-img07.jpg",
+      "PackagePath": "staticwebassets\\images\\tour-img07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\weather.png",
+      "PackagePath": "staticwebassets\\images\\weather.png"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\images\\world.png",
+      "PackagePath": "staticwebassets\\images\\world.png"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\khush\\Desktop\\Travell\\wwwroot\\videos\\hero-video.mp4",
+      "PackagePath": "staticwebassets\\videos\\hero-video.mp4"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.TravelApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.TravelApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.TravelApp.props",
+      "PackagePath": "build\\TravelApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.TravelApp.props",
+      "PackagePath": "buildMultiTargeting\\TravelApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.TravelApp.props",
+      "PackagePath": "buildTransitive\\TravelApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

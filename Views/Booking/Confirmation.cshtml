@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Booking Confirmation";
+}
+
+<section class="confirmation__page-section py-5">
+    <div class="container text-center">
+        <div class="confirmation__box mx-auto p-4 p-md-5 shadow-sm">
+            <i class="bi bi-check-circle-fill text-success display-1 mb-3"></i>
+            <h1 class="display-6 fw-bold mb-3">Booking Confirmed!</h1>
+            @if (ViewBag.BookingId != null)
+            {
+                <p class="lead">Your booking (ID: @ViewBag.BookingId) has been successfully submitted.</p>
+            }
+            else
+            {
+                <p class="lead">Your booking has been successfully submitted.</p>
+            }
+            <p>We have received your booking details. You will receive a confirmation email shortly.</p>
+            <p class="mt-4">Thank you for choosing TravelWorld!</p>
+            <a asp-controller="Home" asp-action="Index" class="btn primary-orange-btn mt-4">Back to Home</a>
+        </div>
+    </div>
+</section> 

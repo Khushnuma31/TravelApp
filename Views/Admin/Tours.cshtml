@@ -1,0 +1,24 @@
+﻿@model IEnumerable<TravelApp.Models.Tour>
+
+@{
+    ViewData["Title"] = "All Tours";
+}
+
+<h2>All Tours</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Destination</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var tour in Model)
+        {
+            <tr>
+                <td>@tour.Destination</td>
+                <td>$@tour.Price</td>
+            </tr>
+        }
+    </tbody>
+</table>

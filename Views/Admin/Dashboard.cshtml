@@ -1,0 +1,40 @@
+﻿@model dynamic
+
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Admin Dashboard</h2>
+
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="card text-center p-3 shadow-sm">
+                <h4>Total Users</h4>
+                <h2>@Model.UsersCount</h2>
+                <a href="@Url.Action("Users", "Admin")" class="btn btn-sm btn-outline-primary mt-2">View Users</a>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card text-center p-3 shadow-sm">
+                <h4>Total Bookings</h4>
+                <h2>@Model.BookingsCount</h2>
+                <a href="@Url.Action("Bookings", "Admin")" class="btn btn-sm btn-outline-success mt-2">View Bookings</a>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card text-center p-3 shadow-sm">
+                <h4>Total Tours</h4>
+                <h2>@Model.ToursCount</h2>
+                <a href="@Url.Action("Tours", "Admin")" class="btn btn-sm btn-outline-warning mt-2">View Tours</a>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card text-center p-3 shadow-sm">
+                <h4>Total Services</h4>
+                <h2>@Model.ServicesCount</h2>
+                <a href="@Url.Action("Services", "Admin")" class="btn btn-sm btn-outline-info mt-2">View Services</a>
+            </div>
+        </div>
+    </div>
+</div>
